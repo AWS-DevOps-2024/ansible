@@ -1,0 +1,9 @@
+- name: Variable from Taskk level
+  hosts: localhost
+  tasks:
+    - name: Variable from Taskk level
+      vars:
+        NAME: "Sumathi"
+        COURSE: "AWS DevOps"
+      ansible.builtin.debug:
+        msg: "Hello {{NAME}}, I'm learning {{COURSE}}"
