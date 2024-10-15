@@ -1,7 +1,7 @@
 - name: Variable Preferences
   hosts: localhost
-  vars:
-    user: "Akhil from PLAY level"
+  # vars:
+  #   user: "Akhil from PLAY level"
   # vars_files:
   # - variable.yaml
   # vars_prompt:
