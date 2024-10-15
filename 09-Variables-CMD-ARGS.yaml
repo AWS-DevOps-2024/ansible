@@ -3,4 +3,6 @@
   tasks:
    - name: Variable from Command Arguments
      ansible.builtin.debug:
-      msg: "Hello {{USERNAME}}, Your password is {{PASSWORD}}"
+      msg: "Hello {{PERSON}}, I'm learning {{COURSE}}"
+
+  # ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 -e "USER=Prem" -e "COURSE=LINUX"
