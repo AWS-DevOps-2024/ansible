@@ -1,0 +1,6 @@
+- name: Variables from Command Arguments
+  hosts: localhost
+  tasks:
+   - name: Variable from Command Arguments
+     ansible.builtin.debug:
+      msg: "Hello {{USERNAME}}, Your password is {{PASSWORD}}"
