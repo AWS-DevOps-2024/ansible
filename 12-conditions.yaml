@@ -4,7 +4,7 @@
   tasks:
     - name: Check if roboshop user exist or not
       ansible.builtin.command: id roboshop
-      register: user
+      register: user #we ae registering the command output in "user" variable
       ignore_errors: true
 
     - name: print user variable
@@ -13,4 +13,9 @@
 
     - name: print return code 
       ansible.builtin.debug:
-        msg: "return code status is {{user.rc}}"
+        msg: "return code status is {{user.rc}}" #printing th ereturn code from the variable "user" output
+
+    - name: add roboshop user
+      ansible.builtin.user:
+        name: roboshop
+      when: user.rc != 0 #condition
