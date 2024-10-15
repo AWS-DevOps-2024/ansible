@@ -13,4 +13,4 @@
 
     - name: print return code 
       ansible.builtin.debug:
-        msg: "output is {{user.rc}}"
+        msg: "return code status is {{user.rc}}"
