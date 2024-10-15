@@ -1,16 +1,24 @@
 - name: Variable Preferences
   hosts: localhost
-  # vars:
-  #   user: "Akhil from PLAY level"
-  # vars_files:
-  # - variable.yaml
-  # vars_prompt:
-  #    name: user
-  #    prompt: Enter your name
-  #    private: false
+  vars:
+    user: "Akhil from PLAY level"
+  vars_files:
+  - variable.yaml
+  vars_prompt:
+     name: user
+     prompt: Enter your name
+     private: false
   tasks:
     - name: Print username
-      # vars:
-      #   user: "Akhil from TASK level"
+      vars:
+        user: "Akhil from TASK level"
       ansible.builtin.debug:
         msg: "Hello {{user}}"
+
+# 1. Command Arguments
+# 2. Task level
+# 3. Variable File level 
+# 4. Command Prompt level 
+# 5. Play level 
+# 6. Inventory level 
+# 7. roles level 
