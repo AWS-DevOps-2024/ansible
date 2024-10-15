@@ -1,0 +1,16 @@
+- name: Variable Preferences
+  hosts: localhost
+  vars:
+    user: "Akhil from PLAY level"
+  vars_files:
+  - variable.yaml
+  vars_prompt:
+     name: user
+     prompt: Enter your name
+     private: false
+  tasks:
+    - name: Print username
+      vars:
+        user: "Akhil from TASK level"
+      ansible.builtin.debug:
+        msg: "Hello {{user}}"
