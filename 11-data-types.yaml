@@ -23,4 +23,4 @@
         msg: Experience is {{EXPERIENCE}}
     - name: Print tye data type-boolean
       ansible.builtin.debug:
-        msg: Is he a quick learner {{LEARNER}}
+        msg: Is he a quick learner::{{LEARNER}}
