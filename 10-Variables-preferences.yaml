@@ -10,7 +10,7 @@
      private: false
   tasks:
     - name: Print username
-      vars:
-        user: "Akhil from TASK level"
+      # vars:
+      #   user: "Akhil from TASK level"
       ansible.builtin.debug:
         msg: "Hello {{user}}"
