@@ -1,0 +1,10 @@
+- name: loops
+  hosts: localhost
+  tasks:
+    - name: print the person names
+      ansible.builtin.debug:
+        msg: "Name is {{item}}" # item is the default keywork for loop in Ansible
+      loop:
+        - Prem
+        - Trixie
+        - Sumathi
