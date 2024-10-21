@@ -1,13 +1,13 @@
 - name: Print Playbook
   hosts: localhost 
   tasks:
-    - name: Ping the message
+    - name: Print the message
       ansible.builtin.debug:
         msg: "Hello DevOps"
       tags:
         - devops
 
-    - name: Ping the message
+    - name: Print the message
       ansible.builtin.debug:
         msg: "Hello AWS"
       tags:
